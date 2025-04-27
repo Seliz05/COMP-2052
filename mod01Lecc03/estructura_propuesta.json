@@ -1,0 +1,38 @@
+{
+    "sistema": {
+      "nombre": "Administrador de Productos y Usuarios",
+      "version": "2.0",
+      "descripcion": "Sistema para gestión de usuarios"
+    },
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Spencer Reid",
+        "correo": "Sreid@example.com",
+        "fecha_registro": "2023-01-15",
+        "activo": true,
+        "roles": ["investigador"],
+        "detalles": {
+          "departamento": "BAU",
+          "telefono": "555-0101"
+        }
+      },
+      {
+        "id": 2,
+        "nombre": "Penelope García",
+        "correo": "Pgarcia@example.com",
+        "fecha_registro": "2023-01-10",
+        "activo": true,
+        "roles": ["soporte_tecnico", "analista"],
+        "detalles": {
+          "departamento": "Tecnología",
+          "telefono": "555-0102"
+        }
+      }
+    ],
+    "estadisticas": {
+      "total_usuarios": 2,
+      "usuarios_activos": 2,
+      "ultimo_id": 2
+    }
+  }

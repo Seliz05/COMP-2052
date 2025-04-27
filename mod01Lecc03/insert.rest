@@ -1,0 +1,8 @@
+POST http://127.0.0.1:5000/crear_usuario
+content-type: application/json
+
+{
+  "id": "3",
+  "nombre": "David Rossi",
+  "correo": "Drossi@example.com"
+}

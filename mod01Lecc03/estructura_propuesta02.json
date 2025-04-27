@@ -1,0 +1,68 @@
+{
+    "sistema": {
+      "nombre": "Gestor de Productos y Usuarios",
+      "version": "2.0",
+      "descripcion": "Sistema para administrar productos y usuarios"
+    },
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Spencer Reid",
+        "correo": "Sreid@example.com",
+        "rol": "admin",
+        "fecha_registro": "2023-01-15",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "nombre": "Penelope García",
+        "correo": "Pgarcia@example.com",
+        "rol": "usuario",
+        "fecha_registro": "2023-02-20",
+        "activo": true
+      }
+    ],
+    "productos": [
+      {
+        "id": 101,
+        "nombre": "Laptop Elite",
+        "descripcion": "Laptop de alto rendimiento",
+        "precio": 1299.99,
+        "stock": 15,
+        "categoria": "Electrónicos",
+        "fecha_creacion": "2023-03-10",
+        "disponible": true
+      },
+      {
+        "id": 102,
+        "nombre": "Smartphone Pro",
+        "descripcion": "Teléfono inteligente última generación",
+        "precio": 899.99,
+        "stock": 30,
+        "categoria": "Electrónicos",
+        "fecha_creacion": "2023-04-05",
+        "disponible": true
+      }
+    ],
+    "pedidos": [
+      {
+        "id": 1001,
+        "usuario_id": 2,
+        "productos": [
+          {
+            "producto_id": 101,
+            "cantidad": 1,
+            "precio_unitario": 1299.99
+          }
+        ],
+        "fecha": "2023-05-12",
+        "total": 1299.99,
+        "estado": "completado"
+      }
+    ],
+    "configuracion": {
+      "impuestos": 0.16,
+      "moneda": "USD",
+      "paginacion": 10
+    }
+  }
