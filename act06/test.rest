@@ -1,0 +1,29 @@
+### Home page
+GET http://127.0.0.1:5000
+
+### Login as admin
+GET http://127.0.0.1:5000/login/admin/adminpass
+
+### Login as editor
+GET http://127.0.0.1:5000/login/editor1/editorpass
+
+### Login as viewer
+GET http://127.0.0.1:5000/login/viewer1/viewerpass
+
+### Access dashboard (requires login)
+GET http://127.0.0.1:5000/dashboard
+
+### Access admin panel (requires admin role)
+GET http://127.0.0.1:5000/admin
+
+### Access editor panel (requires editor role)
+GET http://127.0.0.1:5000/edit
+
+### Access viewer panel (requires viewer role)
+GET http://127.0.0.1:5000/view
+
+### Access API data (requires viewer role)
+GET http://127.0.0.1:5000/api/data
+
+### Logout
+GET http://127.0.0.1:5000/logout

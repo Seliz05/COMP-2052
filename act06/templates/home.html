@@ -1,0 +1,30 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido al Sistema de Roles</h1>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li style="color: {% if category == 'success' %}green{% elif category == 'danger' %}red{% else %}blue{% endif %}">
+                    {{ message }}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    
+    <h2>Usuarios de prueba:</h2>
+    <ul>
+        <li><a href="{{ url_for('login', username='admin', password='adminpass') }}">Login como Admin</a></li>
+        <li><a href="{{ url_for('login', username='editor1', password='editorpass') }}">Login como Editor</a></li>
+        <li><a href="{{ url_for('login', username='viewer1', password='viewerpass') }}">Login como Viewer</a></li>
+        <li><a href="{{ url_for('login', username='multirole', password='multipass') }}">Login como Usuario Multirole</a></li>
+    </ul>
+</body>
+</html>

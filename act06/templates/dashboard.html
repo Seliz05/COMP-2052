@@ -1,0 +1,32 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>Bienvenido, {{ username }}!</p>
+    
+    <h2>Acciones disponibles:</h2>
+    <ul>
+        <li><a href="{{ url_for('admin_panel') }}">Panel de Administración</a></li>
+        <li><a href="{{ url_for('editor_panel') }}">Panel de Edición</a></li>
+        <li><a href="{{ url_for('viewer_panel') }}">Panel de Visualización</a></li>
+        <li><a href="{{ url_for('api_data') }}">Ver datos de API</a></li>
+        <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li>
+    </ul>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li style="color: {% if category == 'success' %}green{% elif category == 'danger' %}red{% else %}blue{% endif %}">
+                    {{ message }}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html>
