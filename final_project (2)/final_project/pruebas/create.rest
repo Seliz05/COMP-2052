@@ -1,0 +1,14 @@
+### Crear un nuevo libro (POST) - Requiere autenticación de Bibliotecario/Admin
+POST http://localhost:5000/libros
+Content-Type: application/json
+#Authorization: Bearer <tu_token_jwt_aquí>
+
+{
+ "titulo": "Rebirth",
+ "autor": "Michi",
+ "isbn": "9780307474728",
+ "categoria": "Sci-Fi",
+ "estado": "Disponible",
+ "anio_publicacion": 2018,
+ "descripcion": "Is a Korean webtoon about a man named Noah who time-travels back to the days before a zombie apocalypse, armed with the knowledge of what's to come and the betrayal of his son."
+}
